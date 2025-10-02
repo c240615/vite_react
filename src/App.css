@@ -1,61 +1,80 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #315659;
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    font-family: sans-serif;
+    background: linear-gradient(120deg, #4e878c 0%, #315659 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 .wrapper {
-    width: 450px;
-    padding: 30px;
-    background-color: #253031;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.create-form {
-    height: 40px;
-    width: 100%;
-    margin: 25px 0px;
-    border: 1px solid #315659;
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 350px;
+    margin: 80px auto;
+    padding: 20px 30px 30px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(49, 86, 89, 0.15);
     display: flex;
-}
-
-.create-form>input {
-    outline: none;
-    border: none;
-    background: none;
-    color: aliceblue;
-    /* 輸入寬高 */
-    width: 100%;
-    height: 100%;
-    padding-left: 10px;
-}
-
-.create-form>button {
-    border: none;
-    background-color: #315659;
-    color: aliceblue;
-    width: 50px;
-    height: 100%;
-    cursor: pointer;
-}
-
-.todo {
-    background-color: #315659;
-    height: 40px;
-    padding: 0 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+}
+
+.login-title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #315659;
+    letter-spacing: 2px;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    border: 1px solid #b0c4c7;
+    border-radius: 6px;
+    background: #f7fafc;
+    color: #315659;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #4e878c;
+    box-shadow: 0 0 0 2px #b0e0e6;
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    height: 44px;
+    background: #4e878c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(49, 86, 89, 0.08);
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #315659;
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        max-width: 95vw;
+        padding: 24px 10px;
+    }
+
+    .login-title {
+        font-size: 1.3rem;
+    }
 }
