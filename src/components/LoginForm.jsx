@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import '../App.css'
 
-function LoginForm() {
+function LoginForm({ onLogin }) {
     const [empid, setEmpid] = useState('')
     const [pass, setPass] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert(`工號：${empid}\n密碼：${pass}`)
+        if (empid === '1002327011' && pass === '1002327011') {
+            alert('登入成功')
+            onLogin(empid)
+        } else {
+            alert('工號或密碼錯誤')
+        }
     }
 
     return (

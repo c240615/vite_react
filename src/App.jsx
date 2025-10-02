@@ -1,10 +1,18 @@
+import { useState } from 'react'
 import './App.css'
 import LoginForm from './components/LoginForm'
+import HomePage from './components/HomePage'
 
 function App() {
+  const [user, setUser] = useState(null)
+
   return (
     <div>
-      <LoginForm />
+      {!user ? (
+        <LoginForm onLogin={setUser} />
+      ) : (
+        <HomePage />
+      )}
     </div>
   )
 }
